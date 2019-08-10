@@ -1,0 +1,5 @@
+
+export default {
+  HAPPY_MEAL: 'HAPPY_MEAL',
+  USER_JOURNEY: 'USER_JOURNEY'
+}

@@ -1,0 +1,8 @@
+
+export default {
+  PRIMARY: '#F25B5D',
+  SECONDARY: '#F1F0F7',
+  WHITE: '#FFFFFF',
+  TEXT_PRIMARY: '#FFFFFF',
+  TEXT_SECONDAY: '#353130'
+}

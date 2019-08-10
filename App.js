@@ -1,19 +1,45 @@
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import React from 'react'
+import Navigation from './src/navigation/Navigation'
+import Typography from './src/constants/Typography'
+import { AppLoading } from 'expo'
+import * as Font from 'expo-font'
 
-export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-    </View>
-  );
+export default class App extends React.Component {
+  
+  state = {
+    isLoadingComplete: false
+  }
+
+  loadResourcesAsync = async () => {
+    await Font.loadAsync({
+      [Typography.RUBIK_REGULAR]: require('./assets/fonts/Rubik-Regular.ttf'),
+      [Typography.RUBIK_BOLD]: require('./assets/fonts/Rubik-Bold.ttf'),
+      [Typography.RUBIK_BLACK]: require('./assets/fonts/Rubik-Black.ttf'),
+    })
+  }
+
+  onError = (error) => {
+    console.log(error)
+  }
+
+  onFinishedLoading = () => {
+    this.setState({ isLoadingComplete: true })
+  }
+
+  render() {
+    if (!this.state.isLoadingComplete) {
+      return (
+        <AppLoading
+          startAsync={this.loadResourcesAsync}
+          onError={this.onError}
+          onFinish={this.onFinishedLoading}
+        />
+      )
+    } else {
+      return (
+        <Navigation />
+      )
+    }
+  }
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
