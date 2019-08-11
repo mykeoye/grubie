@@ -1,6 +1,6 @@
 
 export default {
-  RUBIK_REGULAR: 'rubik',
-  RUBIK_BOLD: 'rubik-bold',
+  AIRBNB_CEREAL_REGULAR: 'rubik',
+  AIRBNB_CEREAL_MEDIUM: 'rubik-bold',
   RUBIK_BLACK: 'rubik-black'
 }
