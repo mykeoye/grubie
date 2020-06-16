@@ -2,9 +2,9 @@
 import Typography from './Typography'
 
 enum TypoStyle {
-  BOLD = Typography.RUBIK_BOLD as any,
+  BOLD = Typography.AIRBNB_CEREAL_MEDIUM as any,
   BLACK = Typography.RUBIK_BLACK as any,
-  REGULAR = Typography.RUBIK_REGULAR as any,
+  REGULAR = Typography.AIRBNB_CEREAL_REGULAR as any,
 }
 
 export default TypoStyle

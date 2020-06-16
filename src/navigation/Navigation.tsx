@@ -4,24 +4,28 @@ import { createAppContainer, createStackNavigator, createSwitchNavigator } from 
 
 import HappyMealScreen from '../screens/onboard/HappyMealScreen'
 import JourneyScreen from '../screens/onboard/JourneyScreen'
+import UserLoginScreen from '../screens/user-acquisition/UserLoginScreen'
+import ForgotPasswordScreen from '../screens/user-acquisition/ForgotPasswordScreen'
+import AccountCreationScreen from '../screens/user-acquisition/AccountCreationScreen';
 
 const UserJourneyStack = createStackNavigator({
-  [Routes.USER_JOURNEY]: JourneyScreen
+  [Routes.USER_JOURNEY]: JourneyScreen,
+  [Routes.USER_LOGIN]: UserLoginScreen,
+  [Routes.USER_SIGNUP]: AccountCreationScreen,
+  [Routes.FORGOT_PASSWORD]: ForgotPasswordScreen
 },
 {
   initialRouteName: Routes.USER_JOURNEY,
   defaultNavigationOptions: {
-    headerStyle: {
-      height: 0,
-      width: 0
-    }
-   }
+    
+  }
 })
 
 const AppNavigation = createSwitchNavigator({
   [Routes.HAPPY_MEAL]: HappyMealScreen,
   [Routes.USER_JOURNEY]: UserJourneyStack
-},{
+},
+{
   initialRouteName: Routes.HAPPY_MEAL
 })
 

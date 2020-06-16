@@ -12,9 +12,8 @@ export default class App extends React.Component {
 
   loadResourcesAsync = async () => {
     await Font.loadAsync({
-      [Typography.RUBIK_REGULAR]: require('./assets/fonts/Rubik-Regular.ttf'),
-      [Typography.RUBIK_BOLD]: require('./assets/fonts/Rubik-Bold.ttf'),
-      [Typography.RUBIK_BLACK]: require('./assets/fonts/Rubik-Black.ttf'),
+      [Typography.AIRBNB_CEREAL_REGULAR]: require('./assets/fonts/AirbnbCereal-Regular.ttf'),
+      [Typography.AIRBNB_CEREAL_MEDIUM]: require('./assets/fonts/AirbnbCereal-Medium.ttf'),
     })
   }
 

@@ -25,7 +25,7 @@ const styles = StyleSheet.create({
     flex: 1
   },
   padded: {
-    padding: 20
+    padding: 30
   },
   center: {
     alignItems: 'center',
